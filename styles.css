@@ -87,3 +87,81 @@ body {
         animation: none;
     }
 }
+
+/* T-03B: Live Data State */
+
+.component-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.component-header h1 {
+    margin-bottom: 8px;
+}
+
+.component-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    padding: 6px 12px;
+    background: #e0f2fe;
+    color: #075985;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.data-card {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.data-card h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.data-card p {
+    margin: 0 0 20px;
+    color: #6b7280;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .component-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+}

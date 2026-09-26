@@ -8,26 +8,37 @@
 </head>
 <body>
     <main class="container">
-        <section class="component" aria-busy="true" aria-label="Loading data">
-            <h1>Resilient Component</h1>
+        <section class="component" aria-label="Loaded data">
+            <header class="component-header">
+                <div>
+                    <h1>Resilient Component</h1>
+                    <p>Live data loaded successfully.</p>
+                </div>
 
-            <div class="skeleton-grid">
-                <article class="skeleton-card">
-                    <div class="skeleton skeleton-title"></div>
-                    <div class="skeleton skeleton-text"></div>
-                    <div class="skeleton skeleton-text short"></div>
+                <div class="metadata">
+                    <span class="badge">Live</span>
+                    <span class="badge">3 Items</span>
+                    <span class="badge">Updated Now</span>
+                </div>
+            </header>
+
+            <div class="data-grid">
+                <article class="data-card">
+                    <h2>Component Alpha</h2>
+                    <p>Primary application component.</p>
+                    <span class="status">Active</span>
                 </article>
 
-                <article class="skeleton-card">
-                    <div class="skeleton skeleton-title"></div>
-                    <div class="skeleton skeleton-text"></div>
-                    <div class="skeleton skeleton-text short"></div>
+                <article class="data-card">
+                    <h2>Component Beta</h2>
+                    <p>Secondary application component.</p>
+                    <span class="status">Active</span>
                 </article>
 
-                <article class="skeleton-card">
-                    <div class="skeleton skeleton-title"></div>
-                    <div class="skeleton skeleton-text"></div>
-                    <div class="skeleton skeleton-text short"></div>
+                <article class="data-card">
+                    <h2>Component Gamma</h2>
+                    <p>Supporting application component.</p>
+                    <span class="status">Active</span>
                 </article>
             </div>
         </section>
