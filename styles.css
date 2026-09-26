@@ -200,3 +200,84 @@ body {
     color: #6b7280;
     line-height: 1.6;
 }
+
+/* T-03C: Error State */
+
+.error-state {
+    padding: 64px 24px;
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.error-state h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.error-state p {
+    margin: 0 0 24px;
+    color: #6b7280;
+}
+
+.error-badge {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.retry-button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #1d4ed8;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.retry-button:hover {
+    background: #1e40af;
+}
+
+.retry-button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* T-03C: Error State */
+
+.error-state {
+    padding: 64px 24px;
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    text-align: center;
+}

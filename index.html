@@ -12,24 +12,65 @@
             <header class="component-header">
                 <div>
                     <h1 id="component-title">Resilient Component</h1>
-                    <p>Data loaded successfully.</p>
+                    <p id="component-description">Unable to load component data.</p>
                 </div>
 
                 <div class="metadata">
-                    <span class="badge">Live</span>
-                    <span class="badge">0 Items</span>
+                    <span class="badge error-badge">Error</span>
                 </div>
             </header>
 
-            <div class="empty-state" role="status">
-                <div class="empty-icon" aria-hidden="true">○</div>
-                <h2>No data available</h2>
+            <div
+                id="error-state"
+                class="error-state"
+                role="alert"
+                aria-live="assertive"
+            >
+                <div class="error-icon" aria-hidden="true">!</div>
+
+                <h2>Something went wrong</h2>
+
                 <p>
-                    The request completed successfully, but there are
-                    currently no items to display.
+                    We couldn't load the data. Please try again.
                 </p>
+
+                <button id="retry-button" class="retry-button" type="button">
+                    Retry
+                </button>
+            </div>
+
+            <div
+                id="loading-state"
+                class="loading-state"
+                aria-live="polite"
+                aria-busy="true"
+                hidden
+            >
+                <p class="sr-only">Loading data, please wait.</p>
+
+                <div class="skeleton-grid">
+                    <article class="skeleton-card">
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-text"></div>
+                        <div class="skeleton skeleton-text short"></div>
+                    </article>
+
+                    <article class="skeleton-card">
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-text"></div>
+                        <div class="skeleton skeleton-text short"></div>
+                    </article>
+
+                    <article class="skeleton-card">
+                        <div class="skeleton skeleton-title"></div>
+                        <div class="skeleton skeleton-text"></div>
+                        <div class="skeleton skeleton-text short"></div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
