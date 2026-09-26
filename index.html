@@ -12,39 +12,28 @@
             <header class="component-header">
                 <div>
                     <h1 id="component-title">Resilient Component</h1>
-                    <p id="component-description">Unable to load component data.</p>
+                    <p id="component-description">Loading component data...</p>
                 </div>
 
                 <div class="metadata">
-                    <span class="badge error-badge">Error</span>
+                    <span id="state-badge" class="badge">Loading</span>
                 </div>
             </header>
 
-            <div
-                id="error-state"
-                class="error-state"
-                role="alert"
-                aria-live="assertive"
-            >
-                <div class="error-icon" aria-hidden="true">!</div>
+            <!-- Demo controls -->
+            <nav class="state-controls" aria-label="Component state controls">
+                <button type="button" data-state="loading">Loading</button>
+                <button type="button" data-state="live">Live Data</button>
+                <button type="button" data-state="empty">Empty</button>
+                <button type="button" data-state="error">Error</button>
+            </nav>
 
-                <h2>Something went wrong</h2>
-
-                <p>
-                    We couldn't load the data. Please try again.
-                </p>
-
-                <button id="retry-button" class="retry-button" type="button">
-                    Retry
-                </button>
-            </div>
-
+            <!-- Loading State -->
             <div
                 id="loading-state"
-                class="loading-state"
+                class="state-panel"
                 aria-live="polite"
                 aria-busy="true"
-                hidden
             >
                 <p class="sr-only">Loading data, please wait.</p>
 
@@ -67,6 +56,67 @@
                         <div class="skeleton skeleton-text short"></div>
                     </article>
                 </div>
+            </div>
+
+            <!-- Live Data State -->
+            <div id="live-state" class="state-panel" hidden>
+                <div class="live-metadata">
+                    <span class="badge">3 Items</span>
+                    <span class="badge">Updated Now</span>
+                </div>
+
+                <div class="data-grid">
+                    <article class="data-card">
+                        <h2>Component Alpha</h2>
+                        <p>Primary application component.</p>
+                        <span class="status">Active</span>
+                    </article>
+
+                    <article class="data-card">
+                        <h2>Component Beta</h2>
+                        <p>Secondary application component.</p>
+                        <span class="status">Active</span>
+                    </article>
+
+                    <article class="data-card">
+                        <h2>Component Gamma</h2>
+                        <p>Supporting application component.</p>
+                        <span class="status">Active</span>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div
+                id="empty-state"
+                class="state-panel empty-state"
+                role="status"
+                hidden
+            >
+                <div class="empty-icon" aria-hidden="true">○</div>
+                <h2>No data available</h2>
+                <p>
+                    The request completed successfully, but there are
+                    currently no items to display.
+                </p>
+            </div>
+
+            <!-- Error State -->
+            <div
+                id="error-state"
+                class="state-panel error-state"
+                role="alert"
+                hidden
+            >
+                <div class="error-icon" aria-hidden="true">!</div>
+
+                <h2>Something went wrong</h2>
+
+                <p>We couldn't load the data. Please try again.</p>
+
+                <button id="retry-button" class="retry-button" type="button">
+                    Retry
+                </button>
             </div>
         </section>
     </main>
