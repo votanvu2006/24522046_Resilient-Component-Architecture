@@ -165,3 +165,38 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* T-03C: Empty State */
+
+.empty-state {
+    padding: 64px 24px;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 32px;
+}
+
+.empty-state h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.empty-state p {
+    max-width: 500px;
+    margin: 0 auto;
+    color: #6b7280;
+    line-height: 1.6;
+}

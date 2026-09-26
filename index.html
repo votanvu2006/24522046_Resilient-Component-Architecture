@@ -8,38 +8,26 @@
 </head>
 <body>
     <main class="container">
-        <section class="component" aria-label="Loaded data">
+        <section class="component" aria-labelledby="component-title">
             <header class="component-header">
                 <div>
-                    <h1>Resilient Component</h1>
-                    <p>Live data loaded successfully.</p>
+                    <h1 id="component-title">Resilient Component</h1>
+                    <p>Data loaded successfully.</p>
                 </div>
 
                 <div class="metadata">
                     <span class="badge">Live</span>
-                    <span class="badge">3 Items</span>
-                    <span class="badge">Updated Now</span>
+                    <span class="badge">0 Items</span>
                 </div>
             </header>
 
-            <div class="data-grid">
-                <article class="data-card">
-                    <h2>Component Alpha</h2>
-                    <p>Primary application component.</p>
-                    <span class="status">Active</span>
-                </article>
-
-                <article class="data-card">
-                    <h2>Component Beta</h2>
-                    <p>Secondary application component.</p>
-                    <span class="status">Active</span>
-                </article>
-
-                <article class="data-card">
-                    <h2>Component Gamma</h2>
-                    <p>Supporting application component.</p>
-                    <span class="status">Active</span>
-                </article>
+            <div class="empty-state" role="status">
+                <div class="empty-icon" aria-hidden="true">○</div>
+                <h2>No data available</h2>
+                <p>
+                    The request completed successfully, but there are
+                    currently no items to display.
+                </p>
             </div>
         </section>
     </main>
